@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="New Covenant Sanctuary Johor — Faith, Community, Compassion. A place to belong, grow, and serve.">
+  <title>New Covenant Sanctuary Johor | NCS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #050505;
+      --black-soft: #101010;
+      --gold: #D4AF37;
+      --gold-light: #F4D675;
+      --gold-deep: #A98218;
+      --cream: #F7F3E8;
+      --white: #FFFFFF;
+      --muted: #BEB9AC;
+      --line: rgba(212,175,55,.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body { font-family: "DM Sans", Arial, sans-serif; background: var(--cream); color: #181818; line-height: 1.7; }
+    a { color: inherit; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(5,5,5,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .nav { max-width: 1180px; margin: auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; min-width: 0; }
+    .brand-globe { width: 42px; height: 42px; color: var(--gold-light); flex: 0 0 auto; filter: drop-shadow(0 0 7px rgba(244,214,117,.6)); }
+    .brand-name { font-family: Cinzel, Georgia, serif; font-size: 15px; font-weight: 700; letter-spacing: .07em; line-height: 1.35; }
+    .brand-name small { display: block; color: var(--gold-light); font-family: "DM Sans", Arial, sans-serif; font-size: 10px; letter-spacing: .2em; margin-top: 3px; }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; list-style: none; }
+    .nav-links a { color: #f4f0e6; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .hero { min-height: 690px; display: grid; place-items: center; padding: 70px 22px 85px; text-align: center; color: white; background: radial-gradient(ellipse at 50% 38%, #30260e 0%, #11100c 31%, #050505 70%); overflow: hidden; position: relative; }
+    .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(212,175,55,.13); border-radius: 50%; width: min(78vw, 760px); aspect-ratio: 1; pointer-events: none; }
+    .hero::after { width: min(62vw, 600px); }
+    .hero-inner { position: relative; z-index: 1; max-width: 850px; }
+    .hero-globe { width: clamp(120px, 20vw, 190px); height: auto; color: var(--gold-light); margin: 0 auto 24px; filter: drop-shadow(0 0 9px rgba(244,214,117,.65)) drop-shadow(0 0 28px rgba(212,175,55,.35)); animation: glow 3s ease-in-out infinite alternate; }
+    @keyframes glow { from { filter: drop-shadow(0 0 7px rgba(244,214,117,.45)) drop-shadow(0 0 16px rgba(212,175,55,.18)); } to { filter: drop-shadow(0 0 14px rgba(244,214,117,.85)) drop-shadow(0 0 34px rgba(212,175,55,.42)); } }
+    .eyebrow { color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 14px; }
+    h1, h2, h3 { font-family: Cinzel, Georgia, serif; font-weight: 600; line-height: 1.25; }
+    h1 { font-size: clamp(34px, 6vw, 68px); letter-spacing: .035em; margin-bottom: 16px; }
+    .hero-tagline { font-size: clamp(15px, 2.2vw, 20px); color: #eee6d4; margin-bottom: 12px; }
+    .hero-copy { max-width: 670px; color: #c9c4b8; margin: 0 auto 30px; font-size: 15px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 23px; background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #17130a; border: 1px solid var(--gold-light); border-radius: 3px; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; transition: transform .2s, box-shadow .2s; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,.22); }
+    .button-outline { background: transparent; color: var(--gold-light); margin-left: 8px; }
+    section { padding: 84px 22px; }
+    .container { max-width: 1100px; margin: auto; }
+    .section-heading { text-align: center; max-width: 760px; margin: 0 auto 44px; }
+    .section-heading .eyebrow { color: var(--gold-deep); }
+    h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 15px; }
+    .section-heading p { color: #666157; }
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 46px; align-items: center; }
+    .about-copy p { margin-bottom: 16px; color: #4e4b44; }
+    .verse { padding: 28px; background: var(--black); color: var(--cream); border-left: 3px solid var(--gold); }
+    .verse blockquote { font-family: Cinzel, Georgia, serif; font-size: 21px; line-height: 1.6; }
+    .verse cite { display: block; color: var(--gold-light); font-style: normal; font-size: 12px; margin-top: 14px; letter-spacing: .08em; }
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+    .value { padding: 23px; text-align: center; border: 1px solid #e6dcc0; background: #fffdf8; }
+    .value-symbol { color: var(--gold-deep); font-size: 28px; margin-bottom: 8px; }
+    .value h3 { font-size: 17px; margin-bottom: 7px; }
+    .value p { color: #68645a; font-size: 13px; }
+    .ministries { background: var(--black); color: var(--cream); }
+    .ministries .section-heading p { color: #c5c0b5; }
+    .ministries .section-heading .eyebrow { color: var(--gold-light); }
+    .ministry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .ministry-card { border: 1px solid var(--line); padding: 26px; background: linear-gradient(145deg, #151515, #0a0a0a); }
+    .ministry-top { display: flex; gap: 15px; align-items: flex-start; margin-bottom: 12px; }
+    .ministry-icon { width: 45px; height: 45px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--line); color: var(--gold-light); font-size: 23px; }
+    .ministry-card h3 { color: var(--gold-light); font-size: 19px; margin: 2px 0 5px; }
+    .ministry-card p { color: #c8c2b7; font-size: 14px; }
+    .schedule { color: var(--white) !important; font-weight: 700; margin: 8px 0 5px; }
+    .ministry-contact { color: var(--gold-light) !important; }
+    .ministry-contact a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .coming { border-style: dashed; }
+    .coming-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold-light); padding: 3px 8px; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+    .community { background: #eee7d5; }
+    .community-panel { background: var(--white); padding: clamp(25px, 5vw, 48px); border: 1px solid #e0d4b4; text-align: center; }
+    .community-panel p { max-width: 780px; margin: 0 auto 16px; color: #5d584e; }
+    .contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 35px; }
+    .contact-card { padding: 28px; background: var(--black); color: var(--cream); }
+    .contact-card h3 { color: var(--gold-light); font-size: 21px; margin-bottom: 17px; }
+    .contact-item { margin: 0 0 17px; color: #e6e0d4; font-size: 14px; overflow-wrap: anywhere; }
+    .contact-item strong { display: block; color: var(--gold-light); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 3px; }
+    .contact-item a { color: inherit; text-decoration: none; }
+    .contact-item a:hover { color: var(--gold-light); text-decoration: underline; }
+    .address { white-space: normal; }
+    .map-frame { width: 100%; min-height: 270px; border: 0; background: #eee7d5; }
+    .map-link { display: inline-block; margin-top: 14px; color: var(--gold-deep); font-weight: 700; font-size: 13px; text-underline-offset: 4px; }
+    .footer { background: #030303; color: #aaa395; padding: 28px 22px; text-align: center; border-top: 1px solid var(--line); font-size: 12px; }
+    .footer strong { color: var(--gold-light); font-family: Cinzel, Georgia, serif; letter-spacing: .06em; }
+    .footer p + p { margin-top: 5px; }
+    @media (max-width: 780px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 12px 18px; gap: 10px; }
+      .nav-links { justify-content: flex-start; gap: 12px 17px; }
+      .nav-links a { font-size: 11px; }
+      .hero { min-height: 610px; }
+      .button-outline { margin: 10px 0 0; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .ministry-grid { grid-template-columns: 1fr; }
+      .values { grid-template-columns: 1fr; }
+      section { padding: 65px 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-globe { animation: none; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="New Covenant Sanctuary home">
+        <svg class="brand-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="brandGold" x1="10" y1="10" x2="90" y2="90">
+              <stop offset="0" stop-color="#FFF0A6"/>
+              <stop offset=".48" stop-color="#D4AF37"/>
+              <stop offset="1" stop-color="#A98218"/>
+            </linearGradient>
+          </defs>
+          <g stroke="url(#brandGold)" stroke-width="2.3">
+            <circle cx="50" cy="50" r="42"/>
+            <ellipse cx="50" cy="50" rx="19" ry="42"/>
+            <ellipse cx="50" cy="50" rx="42" ry="14"/>
+            <path d="M10 34H90M10 66H90M50 8V92"/>
+          </g>
+          <circle cx="50" cy="8" r="2.5" fill="#FFF0A6"/>
+          <circle cx="92" cy="50" r="2.5" fill="#FFF0A6"/>
+        </svg>
+        <span class="brand-name">NEW COVENANT SANCTUARY<small>JOHOR · NCS</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ministries">Ministries &amp; Classes</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <svg class="hero-globe" viewBox="0 0 100 100" fill="none" role="img" aria-label="Shining gold globe">
+          <defs>
+            <linearGradient id="heroGold" x1="8" y1="5" x2="90" y2="95">
+              <stop offset="0" stop-color="#FFF4B8"/>
+              <stop offset=".35" stop-color="#F4D675"/>
+              <stop offset=".68" stop-color="#D4AF37"/>
+              <stop offset="1" stop-color="#A98218"/>
+            </linearGradient>
+          </defs>
+          <g stroke="url(#heroGold)" stroke-width="1.8">
+            <circle cx="50" cy="50" r="42"/>
+            <ellipse cx="50" cy="50" rx="19" ry="42"/>
+            <ellipse cx="50" cy="50" rx="42" ry="14"/>
+            <path d="M9 34H91M9 66H91M50 8V92"/>
+          </g>
+          <path d="M20 25L24 18M76 19L80 26M86 70L91 73M13 70L8 73" stroke="#FFF4B8" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="50" cy="8" r="2.5" fill="#FFF4B8"/>
+          <circle cx="92" cy="50" r="2.5" fill="#FFF4B8"/>
+        </svg>
+        <p class="eyebrow">Faith · Community · Compassion</p>
+        <h1>New Covenant<br>Sanctuary Johor</h1>
+        <p class="hero-tagline">A place to belong. A place to grow. A place to serve.</p>
+        <p class="hero-copy">Growing in faith, walking in compassion, and serving our community together. Everyone is welcome, and every person deserves to be treated with love, dignity, and respect.</p>
+        <a class="button" href="#ministries">Explore Our Ministries</a>
+        <a class="button button-outline" href="#contact">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Who We Are</p>
+          <h2>A Community Rooted in Faith and Love</h2>
+          <p>New Covenant Sanctuary (NCS) is committed to faith, fellowship, encouragement, and practical care for the wider community.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>We seek to create a welcoming place where individuals and families can grow spiritually, build meaningful relationships, and find opportunities to serve others.</p>
+            <p>Our heart is to share compassion beyond boundaries—welcoming people from every race, background, and circumstance, and offering support with kindness and respect.</p>
+            <p>Through Bible learning, prayer, children’s activities, fellowship, and community outreach, we hope to encourage people to grow together and make a positive difference.</p>
+          </div>
+          <div class="verse">
+            <blockquote>“Let all that you do be done in love.”</blockquote>
+            <cite>1 CORINTHIANS 16:14</cite>
+          </div>
+        </div>
+        <div class="values">
+          <article class="value"><div class="value-symbol" aria-hidden="true">♡</div><h3>Love</h3><p>Welcoming people with kindness, dignity, and compassion.</p></article>
+          <article class="value"><div class="value-symbol" aria-hidden="true">✧</div><h3>Faith</h3><p>Growing through Scripture, prayer, learning, and encouragement.</p></article>
+          <article class="value"><div class="value-symbol" aria-hidden="true">◎</div><h3>Service</h3><p>Putting care into action and supporting our wider community.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ministries" id="ministries">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Connect · Learn · Grow</p>
+          <h2>Ministries &amp; Weekly Gatherings</h2>
+          <p>There is a place for you at NCS. Get in touch with the relevant ministry contact for more details.</p>
+        </div>
+        <div class="ministry-grid">
+          <article class="ministry-card">
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">✦</div><div><h3>Online Bible Classes</h3><p>Learn and reflect on the Bible together in an online class.</p></div></div>
+            <p class="schedule">Every Tuesday · 8:30 PM – 10:00 PM</p>
+            <p class="ministry-contact">Contact Selena: <a href="tel:+60174042770">017-404 2770</a></p>
+          </article>
+          <article class="ministry-card">
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">♡</div><div><h3>Children’s Ministry</h3><p>A welcoming time for children to learn, connect, and grow in faith.</p></div></div>
+            <p class="schedule">Every Saturday · 5:00 PM – 7:00 PM</p>
+            <p class="ministry-contact">Contact Pastor Adryana: <a href="https://wa.me/60167481219" target="_blank" rel="noopener noreferrer">+60 16-748 1219</a></p>
+          </article>
+          <article class="ministry-card">
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">✧</div><div><h3>Thursday Healing Prayers</h3><p>Come together for prayer, hope, and encouragement.</p></div></div>
+            <p class="schedule">Every Thursday · 8:00 PM – 10:00 PM</p>
+            <p class="ministry-contact">For details, contact NCS: <a href="https://wa.me/60167481219" target="_blank" rel="noopener noreferrer">WhatsApp us</a></p>
+          </article>
+          <article class="ministry-card">
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">⌂</div><div><h3>Sunday Fellowship</h3><p>Gather for fellowship, connection, and encouragement as a community.</p></div></div>
+            <p class="schedule">Every Sunday · 10:30 AM – 12:00 PM</p>
+            <p class="ministry-contact">For details, contact NCS: <a href="https://wa.me/60167481219" target="_blank" rel="noopener noreferrer">WhatsApp us</a></p>
+          </article>
+          <article class="ministry-card coming">
+            <span class="coming-badge">Coming Soon</span>
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">↗</div><div><h3>Youth &amp; Growth</h3><p>A new space for young people to connect, discover their gifts, build confidence, and grow together.</p></div></div>
+            <p class="schedule">Stay tuned for updates!</p>
+          </article>
+          <article class="ministry-card">
+            <div class="ministry-top"><div class="ministry-icon" aria-hidden="true">♧</div><div><h3>Community Care</h3><p>We aim to encourage practical care, community support, and opportunities to help people in need.</p></div></div>
+            <p class="schedule">Care · Help · Serve · Together</p>
+            <p class="ministry-contact">Interested in getting involved? <a href="#contact">Contact NCS</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community" id="community">
+      <div class="container">
+        <div class="community-panel">
+          <p class="eyebrow">Everyone Is Welcome</p>
+          <h2>Faith That Reaches Beyond Our Walls</h2>
+          <p>NCS seeks to build a caring community through fellowship, learning, prayer, and practical service. We welcome people from all backgrounds and believe that small acts of kindness can make a meaningful difference.</p>
+          <p><strong>Faith · Community · Compassion</strong></p>
+          <a class="button" href="#contact">Connect With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">We'd Love to Hear From You</p>
+          <h2>Contact NCS</h2>
+          <p>Have a question about a class, ministry, or community activity? Reach out to us.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>New Covenant Sanctuary Johor</h3>
+            <div class="contact-item"><strong>Email</strong><a href="mailto:ncsfamilyresourcesjb@gmail.com">ncsfamilyresourcesjb@gmail.com</a></div>
+            <div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/60167481219" target="_blank" rel="noopener noreferrer">+60 16-748 1219</a></div>
+            <div class="contact-item"><strong>Address</strong><span class="address">33-01, Jalan Austin Perdana 3/8,<br>Taman Austin Perdana,<br>81100 Johor Bahru,<br>Johor Darul Ta'zim, Malaysia</span></div>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=33-01%2C%20Jalan%20Austin%20Perdana%203%2F8%2C%20Taman%20Austin%20Perdana%2C%2081100%20Johor%20Bahru%2C%20Johor%20Darul%20Ta%27zim%2C%20Malaysia" target="_blank" rel="noopener noreferrer">Open Location in Google Maps</a>
+          </div>
+          <div>
+            <iframe class="map-frame" title="Map showing New Covenant Sanctuary Johor address" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=33-01%2C%20Jalan%20Austin%20Perdana%203%2F8%2C%20Taman%20Austin%20Perdana%2C%2081100%20Johor%20Bahru%2C%20Johor%20Darul%20Ta%27zim%2C%20Malaysia&amp;output=embed"></iframe>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=33-01%2C%20Jalan%20Austin%20Perdana%203%2F8%2C%20Taman%20Austin%20Perdana%2C%2081100%20Johor%20Bahru%2C%20Johor%20Darul%20Ta%27zim%2C%20Malaysia" target="_blank" rel="noopener noreferrer">Open full map ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>NEW COVENANT SANCTUARY JOHOR</strong></p>
+    <p>Faith · Community · Compassion</p>
+    <p>© 2026 New Covenant Sanctuary Johor. All rights reserved.</p>
+  </footer>
+</body>
+</html>
