@@ -73,14 +73,16 @@
     .pastor-copy p { color:#5d584e; margin:0 0 15px; }
     .pastor-copy h2 { margin-bottom:12px; }
     .gallery { background:#fff; }
-    .gallery-block + .gallery-block { margin-top:58px; }
-    .gallery-title { text-align:center; margin-bottom:24px; }
+    .gallery-block + .gallery-block { margin-top:64px; }
+    .gallery-block { max-width:1050px; margin-left:auto; margin-right:auto; }
+    .gallery-title { text-align:center; margin-bottom:26px; }
     .gallery-title h3 { font-size:25px; margin-bottom:6px; }
     .gallery-title p { color:#68645a; }
-    .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .photo-card { min-height:230px; background:linear-gradient(145deg,#19150b,#59451b); border:1px solid rgba(212,175,55,.55); overflow:hidden; position:relative; }
-    .photo-card img { width:100%; height:100%; min-height:230px; object-fit:cover; display:block; }
-    .photo-card figcaption { position:absolute; inset:auto 0 0; padding:28px 14px 12px; color:#fff; font-size:13px; font-weight:600; background:linear-gradient(transparent,rgba(0,0,0,.8)); }
+    .photo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:stretch; }
+    .photo-card { margin:0; aspect-ratio:4 / 3; min-height:0; background:#f2eee5; border:1px solid rgba(212,175,55,.35); border-radius:10px; overflow:hidden; position:relative; box-shadow:0 3px 12px rgba(0,0,0,.07); }
+    .photo-card img { width:100%; height:100%; min-height:0; object-fit:cover; display:block; transition:transform .35s ease; }
+    .photo-card:hover img { transform:scale(1.025); }
+    .photo-card figcaption { display:none; }
     .gallery-note { margin:15px auto 0; text-align:center; color:#777; font-size:12px; }
     .ministries { background: var(--black); color: var(--cream); }
     .ministries .section-heading p { color: #c5c0b5; }
@@ -120,11 +122,11 @@
       .hero { min-height: 610px; }
       .button-outline { margin: 10px 0 0; }
       .about-grid, .contact-grid, .pastor-panel { grid-template-columns: 1fr; }
-      .photo-grid { grid-template-columns:1fr 1fr; }
+      .photo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
       .pastor-photo, .pastor-photo img { min-height:280px; height:280px; }
       .ministry-grid { grid-template-columns: 1fr; }
       .values { grid-template-columns: 1fr; }
-      .photo-grid { grid-template-columns:1fr; }
+      .photo-grid { grid-template-columns:1fr; gap:14px; }
       section { padding: 65px 18px; }
     }
     @media (prefers-reduced-motion: reduce) {
