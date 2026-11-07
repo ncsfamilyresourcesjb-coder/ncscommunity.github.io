@@ -154,6 +154,11 @@
     .community { background: #eee7d5; }
     .community-panel { background: var(--white); padding: clamp(25px, 5vw, 48px); border: 1px solid #e0d4b4; text-align: center; }
     .community-panel p { max-width: 780px; margin: 0 auto 16px; color: #5d584e; }
+    .healing-vision{position:relative;overflow:hidden;background:linear-gradient(135deg,#fff 0%,#fbf6e9 55%,#f1e5ca 100%)}
+    .healing-vision:before,.healing-vision:after{content:"";position:absolute;width:170px;height:170px;border:1px solid #d4af3755;border-radius:50%;pointer-events:none}
+    .healing-vision:before{left:-95px;top:-95px}.healing-vision:after{right:-95px;bottom:-95px}
+    .healing-vision h2{max-width:850px;margin:0 auto 18px;color:#18130a}
+    .healing-vision .eyebrow{color:var(--gold-deep)}
     .contact { background: var(--white); }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 35px; }
     .contact-card { padding: 28px; background: var(--black); color: var(--cream); }
@@ -302,7 +307,7 @@
 <section class="future-section" id="moving-forward"><div class="container">
 <div class="section-heading"><p class="eyebrow">The Next Chapter</p><h2>Moving Forward</h2><p>Building for Future Generations</p></div>
 <div class="future-intro"><p>As NCS continues to grow, we believe that our journey is far from over.</p><p>With a growing vision to reach more souls, nurture believers and serve the wider community, we are now working towards establishing a new church building.</p><p>This upcoming building represents more than just a physical place of worship. It represents our commitment to creating a spiritual home where individuals and families can encounter God, grow in faith, find fellowship and discover their purpose.</p></div>
-<div class="future-gallery"><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-1.jpeg" alt="Proposed new NCS church building design, view 1"></figure><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-2.jpeg" alt="Proposed new NCS church building design, view 2"></figure><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-3.jpeg" alt="Proposed new NCS church building design, view 3"></figure></div><p class="future-label">Proposed New Church Building</p>
+<div class="future-gallery"><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-1.jpeg" alt="Proposed new NCS church building design, view 1"></figure><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-2.jpeg" alt="Proposed new NCS church building design, view 2"></figure></div><p class="future-label">Proposed New Church Building</p>
 <div class="section-heading"><p class="eyebrow">Our Vision</p><h2 style="color:#fff">A Place for Every Generation</h2></div>
 <div class="vision-grid">
 <article class="vision-card"><div class="vision-number">01</div><h3>A Place of Worship</h3><p>A welcoming sanctuary where individuals and families can gather to worship, pray and experience God's presence.</p></article>
@@ -359,12 +364,13 @@
 
     <section class="community" id="community">
       <div class="container">
-        <div class="community-panel">
-          <p class="eyebrow">Everyone Is Welcome</p>
-          <h2>A Family for the Hurting. A Home for the Healing.</h2>
-          <p>Whatever you are carrying today, you do not have to carry it alone. At NCS, you will find people ready to pray with you, walk beside you and remind you that hope is still possible. Come as you are and discover a community where faith restores, love welcomes and lives can begin again.</p>
-          <p><strong>Heal · Restore · Belong</strong></p>
-          <a class="button" href="#ministries">Come Serve God</a>
+        <div class="community-panel healing-vision">
+          <p class="eyebrow">The Heart of Our Calling</p>
+          <h2>To Heal Those Who Are Broken and Wounded</h2>
+          <p>Some wounds cannot be seen. Some burdens are carried in silence. At NCS, our heart is to be a place where hurting people are welcomed with compassion, listened to without judgement, and supported as they find hope, healing and restoration.</p>
+          <p>Through prayer, fellowship, God's Word and practical care, we want to walk alongside those who feel weary, forgotten or broken—one life, one family and one story at a time.</p>
+          <p><strong>Come as you are. You are welcome here.</strong></p>
+          <a class="button" href="#ministries">Find Your Place at NCS</a>
         </div>
       </div>
     </section>
