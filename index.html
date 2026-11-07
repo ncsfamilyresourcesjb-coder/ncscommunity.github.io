@@ -138,12 +138,20 @@
     .location-qr strong{font-family:Cinzel,Georgia,serif;color:#80631c;letter-spacing:.08em;text-transform:uppercase}
     @media(max-width:780px){.house-fellowship-photos{max-width:520px}.location-qr{min-height:240px}}
 
-    .faith-imagery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0 12px}
-    .faith-image-card{background:#fffdf8;border:1px solid #e6dcc0;overflow:hidden;box-shadow:0 5px 18px #0000000a}
-    .faith-image-card img{display:block;width:100%;height:165px;object-fit:cover}
-    .faith-image-card div{padding:14px 16px 16px;text-align:center}
-    .faith-image-card h3{font-size:16px;color:#80631c;margin-bottom:4px}
-    .faith-image-card p{font-size:12px;color:#68645a}
+    .faith-feature{margin:48px 0 18px;padding:30px 28px 24px;background:linear-gradient(135deg,#f8f3e8,#fffdf8);border-top:1px solid #dfc98d;border-bottom:1px solid #dfc98d;position:relative}
+    .faith-feature:before,.faith-feature:after{content:"";position:absolute;width:44px;height:44px;border-color:#c49a38;opacity:.65}
+    .faith-feature:before{top:10px;left:10px;border-top:1px solid;border-left:1px solid}
+    .faith-feature:after{right:10px;bottom:10px;border-right:1px solid;border-bottom:1px solid}
+    .faith-feature-heading{text-align:center;max-width:720px;margin:0 auto 22px}
+    .faith-feature-heading .eyebrow{color:#9a7625;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px}
+    .faith-feature-heading h3{font:600 clamp(21px,2.5vw,28px) Cinzel,Georgia,serif;color:#211b12;margin:0 0 8px}
+    .faith-feature-heading p:last-child{font-size:13px;line-height:1.7;color:#68645a;margin:0}
+    .faith-imagery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0 auto;max-width:1040px}
+    .faith-image-card{background:transparent;border:0;overflow:visible;box-shadow:none;text-align:center}
+    .faith-image-card img{display:block;width:100%;height:150px;object-fit:cover;border-radius:3px;box-shadow:0 5px 15px #00000017}
+    .faith-image-card div{padding:13px 10px 5px;text-align:center}
+    .faith-image-card h3{font:600 15px Cinzel,Georgia,serif;color:#80631c;margin:0 0 6px}
+    .faith-image-card p{font-size:12px;line-height:1.65;color:#68645a;margin:0}
     .healing-vision h2{font-size:clamp(25px,3.7vw,39px);line-height:1.35}
     .timeline-item{align-items:start}
     .timeline-copy{display:flex;flex-direction:column;gap:0}
@@ -152,7 +160,7 @@
     .timeline-copy p{order:2}
     .timeline-copy .milestone-photos .photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
     .timeline-copy .milestone-photos .photo-card{aspect-ratio:4/3}
-    @media(max-width:780px){.faith-imagery{grid-template-columns:1fr;max-width:520px;margin:28px auto}.faith-image-card img{height:190px}.timeline-copy .milestone-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:780px){.faith-imagery{grid-template-columns:1fr;max-width:520px}.faith-image-card img{height:190px}.faith-feature{padding:26px 18px}.timeline-copy .milestone-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .ministries { background: var(--black); color: var(--cream); }
     .ministries .section-heading p { color: #c5c0b5; }
     .ministries .section-heading .eyebrow { color: var(--gold-light); }
@@ -291,19 +299,22 @@
             <cite>1 CORINTHIANS 16:14</cite>
           </div>
         </div>
-        <div class="faith-imagery" aria-label="Faith, Scripture and communion">
-          <article class="faith-image-card">
-            <img src="https://images.unsplash.com/photo-1674953477965-9fba0d354246?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Open Bible on a wooden table in warm light" loading="lazy">
-            <div><h3>The Word</h3><p>Growing through Scripture and reflection.</p></div>
-          </article>
-          <article class="faith-image-card">
-            <img src="https://images.unsplash.com/photo-1592818868295-f527dbac420d?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Wooden cross standing on a mountain at sunrise" loading="lazy">
-            <div><h3>Our Faith</h3><p>Grounded in hope, grace and the love of God.</p></div>
-          </article>
-          <article class="faith-image-card">
-            <img src="https://images.unsplash.com/photo-1531627467965-e9c3dd19209c?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Communion cup and bread in warm light" loading="lazy">
-            <div><h3>Holy Communion</h3><p>A time of remembrance, reflection and fellowship.</p></div>
-          </article>
+        <div class="faith-feature" aria-label="The foundations of our faith">
+          <div class="faith-feature-heading"><p class="eyebrow">What Shapes Our Walk</p><h3>Faith That Is Lived, Shared and Remembered</h3><p>At NCS, these are more than symbols. They remind us how we grow, what holds us together, and the grace we share as a community.</p></div>
+          <div class="faith-imagery">
+            <article class="faith-image-card">
+              <img src="https://images.unsplash.com/photo-1674953477965-9fba0d354246?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Open Bible representing God's Word as a guide for daily life" loading="lazy">
+              <div><h3>The Word That Guides Us</h3><p>Scripture shapes our choices, strengthens our faith and helps us grow in wisdom.</p></div>
+            </article>
+            <article class="faith-image-card">
+              <img src="https://images.unsplash.com/photo-1592818868295-f527dbac420d?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Cross at sunrise representing the hope and grace at the heart of Christian faith" loading="lazy">
+              <div><h3>The Cross That Grounds Us</h3><p>We remember the love, grace and hope at the heart of our faith in Christ.</p></div>
+            </article>
+            <article class="faith-image-card">
+              <img src="https://images.unsplash.com/photo-1531627467965-e9c3dd19209c?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000" alt="Bread and communion cup representing remembrance and fellowship" loading="lazy">
+              <div><h3>The Table That Unites Us</h3><p>Holy Communion invites us to remember, reflect and share in fellowship together.</p></div>
+            </article>
+          </div>
         </div>
         <div class="values">
           <article class="value"><div class="value-symbol" aria-hidden="true">♡</div><h3>Love</h3><p>Welcoming people with kindness, dignity, and compassion.</p></article>
