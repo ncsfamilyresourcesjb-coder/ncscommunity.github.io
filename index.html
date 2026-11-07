@@ -28,7 +28,7 @@
     .topbar { position: sticky; top: 0; z-index: 20; background: rgba(5,5,5,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
     .nav { max-width: 1180px; margin: auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 22px; }
     .brand { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; min-width: 0; }
-    .brand-globe { width: 42px; height: 42px; color: var(--gold-light); flex: 0 0 auto; filter: drop-shadow(0 0 7px rgba(244,214,117,.6)); }
+    .brand-globe { width: 52px; height: 52px; object-fit: contain; flex: 0 0 auto; }
     .brand-name { font-family: Cinzel, Georgia, serif; font-size: 15px; font-weight: 700; letter-spacing: .07em; line-height: 1.35; }
     .brand-name small { display: block; color: var(--gold-light); font-family: "DM Sans", Arial, sans-serif; font-size: 10px; letter-spacing: .2em; margin-top: 3px; }
     .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; list-style: none; }
@@ -38,7 +38,7 @@
     .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(212,175,55,.13); border-radius: 50%; width: min(78vw, 760px); aspect-ratio: 1; pointer-events: none; }
     .hero::after { width: min(62vw, 600px); }
     .hero-inner { position: relative; z-index: 1; max-width: 850px; }
-    .hero-globe { width: clamp(120px, 20vw, 190px); height: auto; color: var(--gold-light); margin: 0 auto 24px; filter: drop-shadow(0 0 9px rgba(244,214,117,.65)) drop-shadow(0 0 28px rgba(212,175,55,.35)); animation: glow 3s ease-in-out infinite alternate; }
+    .hero-globe { width: clamp(220px, 34vw, 360px); height: auto; object-fit: contain; margin: 0 auto 24px; filter: drop-shadow(0 0 9px rgba(244,214,117,.25)); }
     @keyframes glow { from { filter: drop-shadow(0 0 7px rgba(244,214,117,.45)) drop-shadow(0 0 16px rgba(212,175,55,.18)); } to { filter: drop-shadow(0 0 14px rgba(244,214,117,.85)) drop-shadow(0 0 34px rgba(212,175,55,.42)); } }
     .eyebrow { color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 14px; }
     h1, h2, h3 { font-family: Cinzel, Georgia, serif; font-weight: 600; line-height: 1.25; }
@@ -138,23 +138,7 @@
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="New Covenant Sanctuary home">
-        <svg class="brand-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="brandGold" x1="10" y1="10" x2="90" y2="90">
-              <stop offset="0" stop-color="#FFF0A6"/>
-              <stop offset=".48" stop-color="#D4AF37"/>
-              <stop offset="1" stop-color="#A98218"/>
-            </linearGradient>
-          </defs>
-          <g stroke="url(#brandGold)" stroke-width="2.3">
-            <circle cx="50" cy="50" r="42"/>
-            <ellipse cx="50" cy="50" rx="19" ry="42"/>
-            <ellipse cx="50" cy="50" rx="42" ry="14"/>
-            <path d="M10 34H90M10 66H90M50 8V92"/>
-          </g>
-          <circle cx="50" cy="8" r="2.5" fill="#FFF0A6"/>
-          <circle cx="92" cy="50" r="2.5" fill="#FFF0A6"/>
-        </svg>
+        <img class="brand-globe" src="assets/logo.jpg" alt="NCS New Covenant Sanctuary logo">
         <span class="brand-name">NEW COVENANT SANCTUARY<small>JOHOR · NCS</small></span>
       </a>
       <ul class="nav-links">
@@ -172,25 +156,7 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-inner">
-        <svg class="hero-globe" viewBox="0 0 100 100" fill="none" role="img" aria-label="Shining gold globe">
-          <defs>
-            <linearGradient id="heroGold" x1="8" y1="5" x2="90" y2="95">
-              <stop offset="0" stop-color="#FFF4B8"/>
-              <stop offset=".35" stop-color="#F4D675"/>
-              <stop offset=".68" stop-color="#D4AF37"/>
-              <stop offset="1" stop-color="#A98218"/>
-            </linearGradient>
-          </defs>
-          <g stroke="url(#heroGold)" stroke-width="1.8">
-            <circle cx="50" cy="50" r="42"/>
-            <ellipse cx="50" cy="50" rx="19" ry="42"/>
-            <ellipse cx="50" cy="50" rx="42" ry="14"/>
-            <path d="M9 34H91M9 66H91M50 8V92"/>
-          </g>
-          <path d="M20 25L24 18M76 19L80 26M86 70L91 73M13 70L8 73" stroke="#FFF4B8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="50" cy="8" r="2.5" fill="#FFF4B8"/>
-          <circle cx="92" cy="50" r="2.5" fill="#FFF4B8"/>
-        </svg>
+        <img class="hero-globe" src="assets/logo.jpg" alt="New Covenant Sanctuary gold globe logo">
         <p class="eyebrow">Faith · Community · Compassion</p>
         <h1>New Covenant<br>Sanctuary Johor</h1>
         <p class="hero-tagline">A place to belong. A place to grow. A place to serve.</p>
