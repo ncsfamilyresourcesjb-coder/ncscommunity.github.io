@@ -106,6 +106,27 @@
     .photo-card img{cursor:zoom-in}
     @media(max-width:780px){.timeline:before{left:69px}.timeline-item{grid-template-columns:52px 1fr;gap:30px}.timeline-year{font-size:15px}.timeline-copy:before{left:63px}.pastor-story-panel{grid-template-columns:1fr;gap:28px}.pastor-story-photo{position:static;max-width:330px;margin:auto}.pastor-story-photo img{aspect-ratio:4/3}.future-gallery,.vision-grid{grid-template-columns:1fr}}
 
+
+    /* Historical photographs live with their matching milestone. */
+    .timeline{max-width:1050px}
+    .timeline-copy{min-width:0}
+    .milestone-photos{margin-top:20px}
+    .milestone-photos .photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .milestone-photos .photo-card{aspect-ratio:4/3}
+    .milestone-photos .history-placeholder{min-height:110px}
+    .timeline-item:last-child{padding-bottom:0}
+    @media(max-width:780px){
+      .milestone-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .timeline-copy{padding:18px 16px}
+      .timeline-item{gap:30px}
+    }
+    @media(max-width:460px){
+      .timeline:before{left:54px}
+      .timeline-item{grid-template-columns:42px minmax(0,1fr);gap:20px}
+      .timeline-year{font-size:12px}
+      .timeline-copy:before{left:48px}
+      .milestone-photos .photo-grid{grid-template-columns:1fr}
+    }
     .ministries { background: var(--black); color: var(--cream); }
     .ministries .section-heading p { color: #c5c0b5; }
     .ministries .section-heading .eyebrow { color: var(--gold-light); }
@@ -170,7 +191,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#history">Our History</a></li><li><a href="#pastor">Our Pastor</a></li><li><a href="#moving-forward">New Building</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#history">NCS History</a></li>
+        
         <li><a href="#ministries">Ministries &amp; Classes</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -261,23 +282,14 @@
     <section class="story-section" id="history"><div class="container">
 <div class="section-heading"><p class="eyebrow">Our Journey</p><h2>Our History</h2><p>A Journey of Faith, Prayer and God's Faithfulness</p></div>
 <div class="future-intro" style="color:#625d53"><p>New Covenant Sanctuary (NCS) began its journey in Johor Bahru, Malaysia, in 2008, with a heart to reach people, share the love of Christ and build a community rooted in faith.</p><p>What started as a small ministry has grown through years of prayer, perseverance, obedience and God's grace. Every chapter of our journey has carried its own challenges, lessons and testimonies.</p></div>
-<div class="timeline">
+<div class="timeline" id="history-gallery">
 <article class="timeline-item"><div class="timeline-year">2008</div><div class="timeline-copy"><h3>The Beginning</h3><p>NCS was established in Johor Bahru with a vision to reach souls and bring people closer to Jesus Christ. It began as a small ministry, built on faith and a desire to serve God and His people.</p></div></article>
 <article class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-copy"><h3>A New Chapter</h3><p>In 2014, Pastor Joshua Ravi took over the leadership of the ministry. It was a new beginning that came with challenges and uncertainty. With his wife and young son standing alongside him, he continued the journey through faith and prayer.</p></div></article>
 <article class="timeline-item"><div class="timeline-year">2015</div><div class="timeline-copy"><h3>Reaching Families</h3><p>The ministry began reaching out to families through personal visits and follow-ups. One of the early outreach efforts involved connecting with a family who had little understanding of the church and Jesus Christ.</p><p>Through these efforts, NCS continued to build relationships, share the Gospel and welcome new people into the fellowship.</p></div></article>
-<article class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-copy"><h3>Growth and Expansion</h3><p>As more people joined the ministry, the original worship space became insufficient. The church moved into its first dedicated building at Mutiara Emas to accommodate the growing congregation.</p></div></article>
-<article class="timeline-item"><div class="timeline-year">Later</div><div class="timeline-copy"><h3>The Second Building – Austin Square</h3><p>With continued growth, NCS moved into larger premises at Austin Square. The congregation grew to approximately 100–150 people, including around 80 youths.</p><p>The journey was not without difficulties. Financial responsibilities and building expenses brought challenges, but the church continued to stand together in prayer and faith.</p></div></article>
-<article class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-copy"><h3>Our Current Home</h3><p>In 2021, NCS moved to its current premises at Jalan Austin Perdana.</p><p>Even when the building was not fully ready and electricity was unavailable during the early days, worship continued. The congregation persevered, trusting in God's provision.</p><p>Looking back, every building, every gathering and every life touched represents another testimony of God's faithfulness.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-copy"><h3>Growth and Expansion</h3><p>As more people joined the ministry, the original worship space became insufficient. The church moved into its first dedicated building at Mutiara Emas to accommodate the growing congregation.</p><div class="milestone-photos" aria-label="First church building photographs"><div class="photo-grid"><figure class="photo-card"><img loading="lazy" src="first-building-01.jpeg" alt="NCS first building at Mutiara Emas photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="first-building-02.jpeg" alt="NCS first building at Mutiara Emas photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="first-building-03.jpeg" alt="NCS first building at Mutiara Emas photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="first-building-04.jpeg" alt="NCS first building at Mutiara Emas photograph 4"></figure><figure class="photo-card"><img loading="lazy" src="first-building-05.jpeg" alt="NCS first building at Mutiara Emas photograph 5"></figure></div></div></div></article>
+<article class="timeline-item"><div class="timeline-year">Later</div><div class="timeline-copy"><h3>The Second Building – Austin Square</h3><p>With continued growth, NCS moved into larger premises at Austin Square. The congregation grew to approximately 100–150 people, including around 80 youths.</p><p>The journey was not without difficulties. Financial responsibilities and building expenses brought challenges, but the church continued to stand together in prayer and faith.</p><div class="milestone-photos"><div class="history-placeholder"><div><strong>Austin Square Memories</strong><span>Second-building photographs will appear here when their files are identified.</span></div></div></div></div></article>
+<article class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-copy"><h3>Our Current Home</h3><p>In 2021, NCS moved to its current premises at Jalan Austin Perdana.</p><p>Even when the building was not fully ready and electricity was unavailable during the early days, worship continued. The congregation persevered, trusting in God's provision.</p><p>Looking back, every building, every gathering and every life touched represents another testimony of God's faithfulness.</p><div class="milestone-photos" aria-label="Current church building photographs"><div class="photo-grid"><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-01.jpeg" alt="NCS current home at Jalan Austin Perdana photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-02.jpeg" alt="NCS current home at Jalan Austin Perdana photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-03.jpeg" alt="NCS current home at Jalan Austin Perdana photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-04.jpeg" alt="NCS current home at Jalan Austin Perdana photograph 4"></figure></div></div></div></article>
 </div></div></section>
-<section class="history-gallery" id="history-gallery"><div class="container">
-<div class="section-heading"><p class="eyebrow">Memories Through the Years</p><h2>Church History Gallery</h2><p>Photographs from the places and seasons that have shaped our journey.</p></div>
-<div class="gallery-block"><div class="gallery-title"><h3>Our First Church Building – Mutiara Emas</h3></div><div class="photo-grid">
-<figure class="photo-card"><img loading="lazy" src="first-building-01.jpeg" alt="NCS first church building and early ministry photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="first-building-02.jpeg" alt="NCS first church building and early ministry photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="first-building-03.jpeg" alt="NCS first church building and early ministry photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="first-building-04.jpeg" alt="NCS first church building and early ministry photograph 4"></figure><figure class="photo-card"><img loading="lazy" src="first-building-05.jpeg" alt="NCS first church building and early ministry photograph 5"></figure>
-</div></div>
-<div class="gallery-block"><div class="gallery-title"><h3>Our Second Church Building – Austin Square</h3></div><div class="history-placeholder"><div><strong>Second Building Photographs</strong><span>Photographs will be displayed here once the Austin Square images are available in the repository.</span></div></div></div>
-<div class="gallery-block"><div class="gallery-title"><h3>Our Current Home – Jalan Austin Perdana</h3></div><div class="photo-grid">
-<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-01.jpeg" alt="NCS current church building photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-02.jpeg" alt="NCS current church building photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-03.jpeg" alt="NCS current church building photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-04.jpeg" alt="NCS current church building photograph 4"></figure>
-</div></div></div></section>
 <section class="future-section" id="moving-forward"><div class="container">
 <div class="section-heading"><p class="eyebrow">The Next Chapter</p><h2>Moving Forward</h2><p>Building for Future Generations</p></div>
 <div class="future-intro"><p>As NCS continues to grow, we believe that our journey is far from over.</p><p>With a growing vision to reach more souls, nurture believers and serve the wider community, we are now working towards establishing a new church building.</p><p>This upcoming building represents more than just a physical place of worship. It represents our commitment to creating a spiritual home where individuals and families can encounter God, grow in faith, find fellowship and discover their purpose.</p></div>
