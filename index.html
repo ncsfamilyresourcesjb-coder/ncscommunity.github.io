@@ -84,6 +84,28 @@
     .photo-card:hover img { transform:scale(1.025); }
     .photo-card figcaption { display:none; }
     .gallery-note { margin:15px auto 0; text-align:center; color:#777; font-size:12px; }
+
+    .timeline{max-width:900px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:105px;top:8px;bottom:8px;width:1px;background:var(--gold)}
+    .timeline-item{display:grid;grid-template-columns:82px 1fr;gap:48px;padding-bottom:28px;position:relative}.timeline-year{text-align:right;color:var(--gold-deep);font:700 19px Cinzel,Georgia,serif}
+    .timeline-copy{background:#fff;border:1px solid #e8dfca;border-left:3px solid var(--gold);padding:21px 24px}.timeline-copy:before{content:"";position:absolute;left:99px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid #f8f5ed}
+    .timeline-copy h3{font-size:18px;margin-bottom:8px}.timeline-copy p{font-size:14px;color:#625d53;margin-bottom:8px}
+    .history-placeholder{min-height:160px;border:1px dashed #b99b50;background:#faf7ef;display:grid;place-items:center;text-align:center;padding:24px;color:#78663a;border-radius:10px}
+    .history-placeholder strong{display:block;font-family:Cinzel,Georgia,serif;color:#80631c;margin-bottom:5px}
+    .pastor-story{background:#fff}.pastor-story-panel{display:grid;grid-template-columns:.72fr 1.28fr;gap:42px;align-items:start;max-width:1000px;margin:auto}
+    .pastor-story-photo{position:sticky;top:110px;padding:9px;background:#fff;border:1px solid var(--gold);box-shadow:0 12px 32px #00000017}.pastor-story-photo img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+    .pastor-story-copy p{color:#555047;margin:0 0 17px}.story-quote{margin-top:26px;padding:26px 28px;background:#090909;color:#f7f3e8;border-left:4px solid var(--gold);font:19px/1.55 Cinzel,Georgia,serif}
+    .future-section{background:#090909;color:#f7f3e8}.future-section .section-heading h2{color:#fff}.future-section .section-heading p{color:#c8c0af}.future-section .section-heading .eyebrow{color:var(--gold-light)}
+    .future-intro{max-width:850px;margin:0 auto 34px;text-align:center;color:#d5d0c5}.future-intro p{margin-bottom:14px}
+    .future-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:30px 0 44px}.future-gallery .photo-card{border-color:#f4d67588}
+    .future-label{text-align:center;color:var(--gold-light);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-top:-28px;margin-bottom:36px}
+    .vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.vision-card{border:1px solid #d4af3759;background:linear-gradient(145deg,#171717,#0d0d0d);padding:24px 21px}
+    .vision-number{color:var(--gold-light);font:23px Cinzel,Georgia,serif;margin-bottom:9px}.vision-card h3{color:var(--gold-light);font-size:17px;margin-bottom:8px}.vision-card p{color:#c9c3b8;font-size:13px}
+    .future-closing{text-align:center;max-width:800px;margin:40px auto 0;color:#e4ddce}.future-closing strong{display:block;color:var(--gold-light);font:22px/1.5 Cinzel,Georgia,serif;margin:15px 0}.future-tagline{color:var(--gold-light);letter-spacing:.16em;text-transform:uppercase;font-size:11px;font-weight:700}
+    .lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;background:#000e}.lightbox.open{display:flex}.lightbox img{max-width:94vw;max-height:86vh;object-fit:contain}
+    .lightbox-close{position:absolute;top:18px;right:24px;border:1px solid var(--gold);background:#111;color:var(--gold-light);width:44px;height:44px;border-radius:50%;font-size:26px;cursor:pointer}
+    .photo-card img{cursor:zoom-in}
+    @media(max-width:780px){.timeline:before{left:69px}.timeline-item{grid-template-columns:52px 1fr;gap:30px}.timeline-year{font-size:15px}.timeline-copy:before{left:63px}.pastor-story-panel{grid-template-columns:1fr;gap:28px}.pastor-story-photo{position:static;max-width:330px;margin:auto}.pastor-story-photo img{aspect-ratio:4/3}.future-gallery,.vision-grid{grid-template-columns:1fr}}
+
     .ministries { background: var(--black); color: var(--cream); }
     .ministries .section-heading p { color: #c5c0b5; }
     .ministries .section-heading .eyebrow { color: var(--gold-light); }
@@ -146,7 +168,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#pastor">Our Pastor</a></li>
+        <li><a href="#history">Our History</a></li><li><a href="#pastor">Our Pastor</a></li><li><a href="#moving-forward">New Building</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#history">NCS History</a></li>
         <li><a href="#ministries">Ministries &amp; Classes</a></li>
@@ -196,20 +218,18 @@
     </section>
 
 
-    <section class="pastor" id="pastor">
-      <div class="container">
-        <div class="pastor-panel">
-          <div class="pastor-photo"><img src="pastor-joshua-profile.jpg" alt="Pastor Joshua" onerror="this.style.display='none';this.parentElement.innerHTML='<span>PASTOR JOSHUA<br><small>Profile photograph</small></span>'"></div>
-          <div class="pastor-copy">
-            <p class="eyebrow">Our Leadership</p>
-            <h2>Meet Pastor Joshua</h2>
-            <p>Pastor Joshua serves the NCS family through preaching, prayer, worship and pastoral care. His heart is to encourage people to grow in faith, find strength in prayer and walk together as a caring community.</p>
-            <p>Through Sunday gatherings and house fellowships, he creates opportunities for people to encounter God, support one another and build meaningful relationships.</p>
-            <a class="button" href="#gallery">View Ministry Moments</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="pastor-story" id="pastor"><div class="container">
+      <div class="section-heading"><p class="eyebrow">Our Leadership</p><h2>The Journey of Pastor Joshua Ravi</h2><p>A Calling to Serve, A Heart to Lead</p></div>
+      <div class="pastor-story-panel"><div class="pastor-story-photo"><img src="pastor-joshua-profile.jpg" alt="Pastor Joshua Ravi" loading="lazy"></div><div class="pastor-story-copy">
+      <p>Every calling has a beginning, and every journey of faith comes with moments of uncertainty, growth and surrender. For Pastor Joshua Ravi, his journey into ministry has been one shaped by faith, obedience and a growing passion to serve God's people.</p>
+      <p>Having pursued his Bible college education and obtained a diploma, Pastor Joshua began building his foundation in God's Word. However, stepping into the responsibility of preaching and leading a congregation was not something he initially felt confident about. During the early days of ministry, he often felt hesitant and nervous about preaching, and would invite other pastors to share the Word during church gatherings.</p>
+      <p>A defining moment came during one particular service when a guest speaker was preaching. Pastor Joshua experienced what he understood to be a personal calling from the Holy Spirit, encouraging him to step forward and begin preaching from the following week, trusting that God would teach and guide him along the way.</p>
+      <p>Taking that step of faith, Pastor Joshua delivered his first sermon on the Holy Spirit. What once seemed beyond his confidence gradually became part of his calling. Through obedience, experience and continued spiritual growth, he developed into a teacher, preacher and spiritual adviser, faithfully serving the congregation.</p>
+      <p>As the ministry grew, so did his heart for the people entrusted to his care. His passion is to reach souls, bring people back to Christ and help individuals discover their God-given purpose. He believes that the work of the church extends beyond gathering people for worship; it is about making disciples, equipping believers and sending them out to fulfil their calling.</p>
+      <p>Today, Pastor Joshua's vision reaches beyond the present generation. He desires to see lives transformed, families strengthened, young people guided in faith and disciples raised to continue the work of God for generations to come.</p>
+      <p>His journey reminds us that answering God's call does not require perfect confidence or having all the answers. It begins with a willing heart, a step of obedience and the faith to trust God throughout the journey.</p>
+      <div class="story-quote">“A willing heart, a faithful God and a calling that reaches beyond generations.”</div>
+      </div></div></div></section>
 
     <section class="gallery" id="gallery">
       <div class="container">
@@ -234,54 +254,45 @@
           </div>
         </div>
 
-        <div class="gallery-block" id="history">
-          <div class="gallery-title"><h3>NCS Beginnings</h3><p>Remembering the people and moments that helped shape our community.</p></div>
-          <div class="photo-grid">
-            <figure class="photo-card"><img src="first-building-01.jpeg" alt="Members gathered at an early NCS church service"></figure>
-            <figure class="photo-card"><img src="first-building-02.jpeg" alt="NCS members gathered inside the first building"></figure>
-            <figure class="photo-card"><img src="first-building-03.jpeg" alt="Children and families at an NCS gathering"></figure>
-            <figure class="photo-card"><img src="first-building-04.jpeg" alt="Children and members at an NCS gathering"></figure>
-            <figure class="photo-card"><img src="first-building-05.jpeg" alt="NCS congregation gathered together"></figure>
-          </div>
-        </div>
-        <div class="gallery-block">
-          <div class="gallery-title"><h3>Church Life &amp; Gatherings</h3><p>More moments of worship, fellowship and community life at NCS.</p></div>
-          <div class="photo-grid">
-            <figure class="photo-card"><img src="building-period-unconfirmed-01.jpeg" alt="NCS congregation gathered for a service"></figure>
-            <figure class="photo-card"><img src="building-period-unconfirmed-02.jpeg" alt="NCS congregation gathered in the worship hall"></figure>
-            <figure class="photo-card"><img src="building-period-unconfirmed-03.jpeg" alt="NCS members attending a church service"></figure>
-            <figure class="photo-card"><img src="building-period-unconfirmed-04.jpeg" alt="NCS members praising together"></figure>
-          </div>
-        </div>
-        <div class="gallery-block" id="children-ministry">
-          <div class="gallery-title"><h3>Children’s Ministry</h3><p>Helping young hearts learn, play, create and grow together.</p></div>
-          <div class="photo-grid">
-            <figure class="photo-card"><img src="children-ministry-01.jpeg" alt="Children spending time together during NCS children's ministry"></figure>
-            <figure class="photo-card"><img src="children-ministry-02.jpeg" alt="Child taking part in a children's activity"></figure>
-            <figure class="photo-card"><img src="children-ministry-03.jpeg" alt="Children participating in a group activity"></figure>
-            <figure class="photo-card"><img src="children-ministry-04.jpeg" alt="Children working on a creative activity together"></figure>
-          </div>
-        </div>
-
         <p class="gallery-note">More ministry photographs and stories will be added as our community grows.</p>
       </div>
     </section>
 
-    <section class="gallery" id="church-history">
-<div class="container"><div class="section-heading"><p class="eyebrow">Our Journey</p><h2>Our Church History</h2><p>Remembering the spaces and people who shaped our NCS journey.</p></div>
-<div class="gallery-block"><div class="gallery-title"><h3>Our First Building</h3><p>Memories from the beginning of our journey.</p></div><div class="photo-grid">
-<figure class="photo-card"><img loading="lazy" src="first-building-01.jpeg" alt="NCS first building photograph 1"></figure>
-<figure class="photo-card"><img loading="lazy" src="first-building-02.jpeg" alt="NCS first building photograph 2"></figure>
-<figure class="photo-card"><img loading="lazy" src="first-building-03.jpeg" alt="NCS first building photograph 3"></figure>
-<figure class="photo-card"><img loading="lazy" src="first-building-04.jpeg" alt="NCS first building photograph 4"></figure>
-<figure class="photo-card"><img loading="lazy" src="first-building-05.jpeg" alt="NCS first building photograph 5"></figure>
+    <section class="story-section" id="history"><div class="container">
+<div class="section-heading"><p class="eyebrow">Our Journey</p><h2>Our History</h2><p>A Journey of Faith, Prayer and God's Faithfulness</p></div>
+<div class="future-intro" style="color:#625d53"><p>New Covenant Sanctuary (NCS) began its journey in Johor Bahru, Malaysia, in 2008, with a heart to reach people, share the love of Christ and build a community rooted in faith.</p><p>What started as a small ministry has grown through years of prayer, perseverance, obedience and God's grace. Every chapter of our journey has carried its own challenges, lessons and testimonies.</p></div>
+<div class="timeline">
+<article class="timeline-item"><div class="timeline-year">2008</div><div class="timeline-copy"><h3>The Beginning</h3><p>NCS was established in Johor Bahru with a vision to reach souls and bring people closer to Jesus Christ. It began as a small ministry, built on faith and a desire to serve God and His people.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-copy"><h3>A New Chapter</h3><p>In 2014, Pastor Joshua Ravi took over the leadership of the ministry. It was a new beginning that came with challenges and uncertainty. With his wife and young son standing alongside him, he continued the journey through faith and prayer.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">2015</div><div class="timeline-copy"><h3>Reaching Families</h3><p>The ministry began reaching out to families through personal visits and follow-ups. One of the early outreach efforts involved connecting with a family who had little understanding of the church and Jesus Christ.</p><p>Through these efforts, NCS continued to build relationships, share the Gospel and welcome new people into the fellowship.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-copy"><h3>Growth and Expansion</h3><p>As more people joined the ministry, the original worship space became insufficient. The church moved into its first dedicated building at Mutiara Emas to accommodate the growing congregation.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">Later</div><div class="timeline-copy"><h3>The Second Building – Austin Square</h3><p>With continued growth, NCS moved into larger premises at Austin Square. The congregation grew to approximately 100–150 people, including around 80 youths.</p><p>The journey was not without difficulties. Financial responsibilities and building expenses brought challenges, but the church continued to stand together in prayer and faith.</p></div></article>
+<article class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-copy"><h3>Our Current Home</h3><p>In 2021, NCS moved to its current premises at Jalan Austin Perdana.</p><p>Even when the building was not fully ready and electricity was unavailable during the early days, worship continued. The congregation persevered, trusting in God's provision.</p><p>Looking back, every building, every gathering and every life touched represents another testimony of God's faithfulness.</p></div></article>
+</div></div></section>
+<section class="history-gallery" id="history-gallery"><div class="container">
+<div class="section-heading"><p class="eyebrow">Memories Through the Years</p><h2>Church History Gallery</h2><p>Photographs from the places and seasons that have shaped our journey.</p></div>
+<div class="gallery-block"><div class="gallery-title"><h3>Our First Church Building – Mutiara Emas</h3></div><div class="photo-grid">
+<figure class="photo-card"><img loading="lazy" src="first-building-01.jpeg" alt="NCS first church building and early ministry photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="first-building-02.jpeg" alt="NCS first church building and early ministry photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="first-building-03.jpeg" alt="NCS first church building and early ministry photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="first-building-04.jpeg" alt="NCS first church building and early ministry photograph 4"></figure><figure class="photo-card"><img loading="lazy" src="first-building-05.jpeg" alt="NCS first church building and early ministry photograph 5"></figure>
 </div></div>
-<div class="gallery-block"><div class="gallery-title"><h3>Our Current Church Building</h3><p>Our present home for worship, fellowship and community.</p></div><div class="photo-grid">
-<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-01.jpeg" alt="NCS current church building"></figure>
-<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-02.jpeg" alt="NCS current church building"></figure>
-<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-03.jpeg" alt="NCS current church building"></figure>
-<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-04.jpeg" alt="NCS current church building"></figure>
+<div class="gallery-block"><div class="gallery-title"><h3>Our Second Church Building – Austin Square</h3></div><div class="history-placeholder"><div><strong>Second Building Photographs</strong><span>Photographs will be displayed here once the Austin Square images are available in the repository.</span></div></div></div>
+<div class="gallery-block"><div class="gallery-title"><h3>Our Current Home – Jalan Austin Perdana</h3></div><div class="photo-grid">
+<figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-01.jpeg" alt="NCS current church building photograph 1"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-02.jpeg" alt="NCS current church building photograph 2"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-03.jpeg" alt="NCS current church building photograph 3"></figure><figure class="photo-card"><img loading="lazy" src="building-period-unconfirmed-04.jpeg" alt="NCS current church building photograph 4"></figure>
 </div></div></div></section>
+<section class="future-section" id="moving-forward"><div class="container">
+<div class="section-heading"><p class="eyebrow">The Next Chapter</p><h2>Moving Forward</h2><p>Building for Future Generations</p></div>
+<div class="future-intro"><p>As NCS continues to grow, we believe that our journey is far from over.</p><p>With a growing vision to reach more souls, nurture believers and serve the wider community, we are now working towards establishing a new church building.</p><p>This upcoming building represents more than just a physical place of worship. It represents our commitment to creating a spiritual home where individuals and families can encounter God, grow in faith, find fellowship and discover their purpose.</p></div>
+<div class="future-gallery"><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-1.jpeg" alt="Proposed new NCS church building design, view 1"></figure><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-2.jpeg" alt="Proposed new NCS church building design, view 2"></figure><figure class="photo-card"><img loading="lazy" src="new%20future%20building%20-3.jpeg" alt="Proposed new NCS church building design, view 3"></figure></div><p class="future-label">Proposed New Church Building</p>
+<div class="section-heading"><p class="eyebrow">Our Vision</p><h2 style="color:#fff">A Place for Every Generation</h2></div>
+<div class="vision-grid">
+<article class="vision-card"><div class="vision-number">01</div><h3>A Place of Worship</h3><p>A welcoming sanctuary where individuals and families can gather to worship, pray and experience God's presence.</p></article>
+<article class="vision-card"><div class="vision-number">02</div><h3>A Home for Families</h3><p>A spiritual home where families can grow together in faith, fellowship and love.</p></article>
+<article class="vision-card"><div class="vision-number">03</div><h3>A Foundation for Children and Youth</h3><p>A nurturing environment where the younger generation can learn God's Word, discover their purpose and develop a strong foundation in Christ.</p></article>
+<article class="vision-card"><div class="vision-number">04</div><h3>A Centre for Discipleship</h3><p>A place where believers can be equipped, trained and encouraged to fulfil their God-given calling.</p></article>
+<article class="vision-card"><div class="vision-number">05</div><h3>A Heart for the Community</h3><p>A centre for compassionate outreach, providing care, encouragement and support to those in need.</p></article>
+<article class="vision-card"><div class="vision-number">06</div><h3>A Legacy for Future Generations</h3><p>A lasting foundation where the work of God can continue from generation to generation.</p></article>
+</div>
+<div class="future-closing"><p>As we take this next step of faith, we remain grateful for every person, every prayer and every season that has brought us this far.</p><strong>“The journey continues. The vision remains. And we look forward with faith to what God has prepared for the generations ahead.”</strong><p class="future-tagline">New Beginnings. Greater Purpose. Generations of Impact.</p></div>
+</div></section>
 <section class="ministries" id="ministries">
       <div class="container">
         <div class="section-heading">
@@ -359,6 +370,9 @@
       </div>
     </section>
   </main>
+
+<div class="lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photograph"><button class="lightbox-close" type="button" aria-label="Close enlarged photograph">&times;</button><img src="" alt=""></div>
+<script>(function(){const box=document.getElementById('photo-lightbox'),img=box.querySelector('img'),close=box.querySelector('button');function shut(){box.classList.remove('open');img.src='';document.body.style.overflow='';}document.querySelectorAll('.photo-card img').forEach(function(photo){photo.addEventListener('click',function(){img.src=photo.currentSrc||photo.src;img.alt=photo.alt||'Enlarged NCS photograph';box.classList.add('open');document.body.style.overflow='hidden';close.focus();});});close.addEventListener('click',shut);box.addEventListener('click',function(e){if(e.target===box)shut();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&box.classList.contains('open'))shut();});}());</script>
 
   <footer class="footer">
     <p><strong>NEW COVENANT SANCTUARY JOHOR</strong></p>
