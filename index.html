@@ -65,6 +65,23 @@
     .value-symbol { color: var(--gold-deep); font-size: 28px; margin-bottom: 8px; }
     .value h3 { font-size: 17px; margin-bottom: 7px; }
     .value p { color: #68645a; font-size: 13px; }
+
+    .pastor { background: #f8f5ed; }
+    .pastor-panel { display:grid; grid-template-columns: .85fr 1.15fr; gap:38px; align-items:center; max-width:940px; margin:auto; }
+    .pastor-photo { min-height:390px; border:8px solid #fff; outline:1px solid #d4af37; background:linear-gradient(145deg,#17130a,#4b3912); display:grid; place-items:center; color:#f4d675; text-align:center; padding:24px; }
+    .pastor-photo img { width:100%; height:390px; object-fit:cover; display:block; }
+    .pastor-copy p { color:#5d584e; margin:0 0 15px; }
+    .pastor-copy h2 { margin-bottom:12px; }
+    .gallery { background:#fff; }
+    .gallery-block + .gallery-block { margin-top:58px; }
+    .gallery-title { text-align:center; margin-bottom:24px; }
+    .gallery-title h3 { font-size:25px; margin-bottom:6px; }
+    .gallery-title p { color:#68645a; }
+    .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .photo-card { min-height:230px; background:linear-gradient(145deg,#19150b,#59451b); border:1px solid rgba(212,175,55,.55); overflow:hidden; position:relative; }
+    .photo-card img { width:100%; height:100%; min-height:230px; object-fit:cover; display:block; }
+    .photo-card figcaption { position:absolute; inset:auto 0 0; padding:28px 14px 12px; color:#fff; font-size:13px; font-weight:600; background:linear-gradient(transparent,rgba(0,0,0,.8)); }
+    .gallery-note { margin:15px auto 0; text-align:center; color:#777; font-size:12px; }
     .ministries { background: var(--black); color: var(--cream); }
     .ministries .section-heading p { color: #c5c0b5; }
     .ministries .section-heading .eyebrow { color: var(--gold-light); }
@@ -102,9 +119,12 @@
       .nav-links a { font-size: 11px; }
       .hero { min-height: 610px; }
       .button-outline { margin: 10px 0 0; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid, .pastor-panel { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns:1fr 1fr; }
+      .pastor-photo, .pastor-photo img { min-height:280px; height:280px; }
       .ministry-grid { grid-template-columns: 1fr; }
       .values { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns:1fr; }
       section { padding: 65px 18px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -140,6 +160,8 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#pastor">Our Pastor</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#ministries">Ministries &amp; Classes</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -201,6 +223,48 @@
           <article class="value"><div class="value-symbol" aria-hidden="true">✧</div><h3>Faith</h3><p>Growing through Scripture, prayer, learning, and encouragement.</p></article>
           <article class="value"><div class="value-symbol" aria-hidden="true">◎</div><h3>Service</h3><p>Putting care into action and supporting our wider community.</p></article>
         </div>
+      </div>
+    </section>
+
+
+    <section class="pastor" id="pastor">
+      <div class="container">
+        <div class="pastor-panel">
+          <div class="pastor-photo"><img src="assets/pastor-joshua-profile.jpg" alt="Pastor Joshua" onerror="this.style.display='none';this.parentElement.innerHTML='<span>PASTOR JOSHUA<br><small>Profile photograph</small></span>'"></div>
+          <div class="pastor-copy">
+            <p class="eyebrow">Our Leadership</p>
+            <h2>Meet Pastor Joshua</h2>
+            <p>Pastor Joshua serves the NCS family through preaching, prayer, worship and pastoral care. His heart is to encourage people to grow in faith, find strength in prayer and walk together as a caring community.</p>
+            <p>Through Sunday gatherings and house fellowships, he creates opportunities for people to encounter God, support one another and build meaningful relationships.</p>
+            <a class="button" href="#gallery">View Ministry Moments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Life at NCS</p>
+          <h2>Worship, Fellowship &amp; Community</h2>
+          <p>A glimpse of the people, prayer and shared moments that make up our NCS family.</p>
+        </div>
+        <div class="gallery-block">
+          <div class="gallery-title"><h3>Sunday Worship</h3><p>Gathering together in praise, prayer and the Word.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card"><img src="assets/sunday-worship-01.jpg" alt="NCS congregation gathered for Sunday worship"><figcaption>Our Sunday gathering</figcaption></figure>
+            <figure class="photo-card"><img src="assets/sunday-worship-02.jpg" alt="Pastor Joshua leading worship"><figcaption>Leading the congregation in worship</figcaption></figure>
+            <figure class="photo-card"><img src="assets/sunday-worship-03.jpg" alt="Congregation standing in praise"><figcaption>United in praise</figcaption></figure>
+          </div>
+        </div>
+        <div class="gallery-block">
+          <div class="gallery-title"><h3>House Fellowship</h3><p>Growing together through prayer, encouragement and care.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card"><img src="assets/house-fellowship-01.jpg" alt="Pastor Joshua praying with members at a house fellowship"><figcaption>Prayer and ministry</figcaption></figure>
+            <figure class="photo-card"><img src="assets/house-fellowship-02.jpg" alt="Members gathered in a group prayer"><figcaption>Praying together as one family</figcaption></figure>
+          </div>
+        </div>
+        <p class="gallery-note">More ministry photographs and stories will be added as our community grows.</p>
       </div>
     </section>
 
