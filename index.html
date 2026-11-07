@@ -195,6 +195,7 @@
     .footer { background: #030303; color: #aaa395; padding: 28px 22px; text-align: center; border-top: 1px solid var(--line); font-size: 12px; }
     .footer strong { color: var(--gold-light); font-family: Cinzel, Georgia, serif; letter-spacing: .06em; }
     .footer p + p { margin-top: 5px; }
+    .footer-social a{color:#d9bd70;text-decoration:none}.footer-social a:hover{text-decoration:underline}
     @media (max-width: 780px) {
       .nav { align-items: flex-start; flex-direction: column; padding: 12px 18px; gap: 10px; }
       .nav-links { justify-content: flex-start; gap: 12px 17px; }
@@ -247,7 +248,25 @@
 .vision-feature-text-only .vision-feature-copy{max-width:760px;margin:0 auto;text-align:center;padding:42px 34px}
 @media(max-width:620px){.vision-feature-text-only .vision-feature-copy{padding:30px 22px}}
 
-</style>
+
+    .social-connect{background:#f4eedf;border-top:1px solid #e2d5b5;border-bottom:1px solid #e2d5b5}
+    .social-connect .section-heading{margin-bottom:32px}
+    .social-connect-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;max-width:1000px;margin:auto;align-items:stretch}
+    .social-links-panel{display:grid;gap:12px}
+    .social-link-card{display:flex;align-items:center;gap:15px;padding:17px 19px;background:#fffdf8;border:1px solid #e2d5b5;border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+    .social-link-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #0000000c}
+    .social-mark{display:grid;place-items:center;width:43px;height:43px;flex:0 0 43px;border-radius:50%;background:linear-gradient(145deg,#f4d675,#b78b29);color:#17130a;font:700 25px Arial,sans-serif}
+    .social-tiktok{font-size:28px}.social-youtube{font-size:18px}
+    .social-link-card strong{display:block;color:#241d12;font:600 16px Cinzel,Georgia,serif}
+    .social-link-card small{display:block;color:#6e675a;font-size:12px;margin-top:2px}
+    .social-arrow{margin-left:auto;color:#98721e;font-size:20px}
+    .social-qr-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#fffdf8;border:1px solid #d9c693;border-radius:8px;padding:22px}
+    .social-qr-panel img{width:170px;height:170px;object-fit:contain;background:#fff;padding:7px;border:1px solid #d4af37;border-radius:6px}
+    .social-qr-panel h3{font:600 17px Cinzel,Georgia,serif;color:#81611a;margin:12px 0 5px}
+    .social-qr-panel p{font-size:12px;line-height:1.6;color:#68645a;max-width:230px}
+    @media(max-width:780px){.social-connect-grid{grid-template-columns:1fr}.social-qr-panel{order:-1}.social-qr-panel img{width:150px;height:150px}}
+
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -427,6 +446,34 @@
       </div>
     </section>
 
+    <section class="social-connect" id="connect-online">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Stay Connected</p>
+          <h2>Follow the NCS Journey.</h2>
+          <p>See what's happening in our community. Follow our pages for church news, ministry updates, gatherings, videos and moments from NCS.</p>
+        </div>
+        <div class="social-connect-grid">
+          <div class="social-links-panel">
+            <a class="social-link-card" href="https://www.facebook.com/newcovenant.sanctuary.5" target="_blank" rel="noopener noreferrer">
+              <span class="social-mark">f</span><span><strong>Facebook</strong><small>News, photos and community updates</small></span><span class="social-arrow">↗</span>
+            </a>
+            <a class="social-link-card" href="https://www.tiktok.com/@joshuaravi93?_r=1&amp;_t=ZS-9BCKu2J36wO" target="_blank" rel="noopener noreferrer">
+              <span class="social-mark social-tiktok">♪</span><span><strong>TikTok</strong><small>Short videos and ministry moments</small></span><span class="social-arrow">↗</span>
+            </a>
+            <a class="social-link-card" href="https://www.youtube.com/@newcovenantsanctuaryjohor9137" target="_blank" rel="noopener noreferrer">
+              <span class="social-mark social-youtube">▶</span><span><strong>YouTube</strong><small>Messages, videos and church moments</small></span><span class="social-arrow">↗</span>
+            </a>
+          </div>
+          <div class="social-qr-panel">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&amp;format=png&amp;margin=8&amp;data=https%3A%2F%2Fncsfamilyresourcesjb-coder.github.io%2Fncscommunity.github.io%2F%23connect-online" alt="QR code to open NCS social media links" loading="lazy">
+            <h3>Scan to Stay Connected</h3>
+            <p>One scan takes you to all our social pages. Choose where you'd like to follow us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="container">
         <div class="section-heading">
@@ -457,6 +504,7 @@
   <footer class="footer">
     <p><strong>NEW COVENANT SANCTUARY JOHOR</strong></p>
     <p>Faith · Community · Compassion</p>
+    <p class="footer-social"><a href="https://www.facebook.com/newcovenant.sanctuary.5" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.tiktok.com/@joshuaravi93?_r=1&amp;_t=ZS-9BCKu2J36wO" target="_blank" rel="noopener noreferrer">TikTok</a> · <a href="https://www.youtube.com/@newcovenantsanctuaryjohor9137" target="_blank" rel="noopener noreferrer">YouTube</a></p>
     <p>© 2026 New Covenant Sanctuary Johor. All rights reserved.</p>
   </footer>
 </body>
